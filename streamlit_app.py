@@ -14,7 +14,7 @@ LOTTIE_ANIMATION_1 = ASSETS / "Animation1.json"
 LOTTIE_ANIMATION_2 = ASSETS / "Animation2.json"
 LOTTIE_ANIMATION = ASSETS / "animation_holiday.json"
 LOTTIE_ANIMATION_3 = ASSETS / "Animation3.json"
-
+LOTTIE_ANIMATION_4 =  ASSETS / "spotify.json"
 # Function to load and display the Lottie animation
 def load_lottie_animation(file_path):
     with open(file_path, "r") as f:
@@ -23,7 +23,7 @@ def load_lottie_animation(file_path):
 
 # Function to apply snowfall effect
 def run_snow_animation():
-    rain(emoji="❄️", font_size=16, falling_speed=7, animation_length="infinite")
+    rain(emoji="🎁", font_size=16, falling_speed=4, animation_length="infinite")
 
 
 # Function to get the name from query parameters
@@ -47,7 +47,7 @@ PERSON_NAME = get_person_name()
 st.header(f"Merry Christmas, My Friend!!! 🎄", anchor=False)
 colored_header(
         label="1. Giáng sinh đã đến với mọi nhà ",
-        description="Christmas has come to everyone 💖💖💖",
+        description="Christmas has come to everyone ❄️❄️",
         color_name="red-70",
     )
 st.write("""
@@ -75,15 +75,15 @@ st_lottie(lottie_animation3, key="lottie-holiday-3", height=300)
 st.markdown("##### Gửi gắm những lời yêu thương: 💌💌💌",unsafe_allow_html=True)
 col1, col2 = st.columns(2)
 with col1:
-    receiver = st.text_input('Tên người nhận', placeholder="Nhập tên người nhận")
+    receiver = st.text_input('Người nhận 😘', placeholder="Nhập tên người nhận")
 with col2:
-    content = st.text_input('Nội dung: ', placeholder="Nhập nội dung")
+    content = st.text_input('Nội dung 📫: ', placeholder="Nhập nội dung")
 if st.button("Gửi"):
     progress_text = "Thư đang được gửi, xin vui lòng chờ 🎅🎅"
     my_bar = st.progress(0, text=progress_text)
 
     for percent_complete in range(100):
-        time.sleep(0.01)
+        time.sleep(0.05)
         my_bar.progress(percent_complete + 1, text=progress_text)
     time.sleep(1)
     my_bar.empty()
@@ -99,9 +99,11 @@ Giai điệu các bài hát Giáng sinh vang lên trong những ngày cuối nă
 # option = st.selectbox(
 #     'Lựa chọn bài hát 🎄🎄',
 #     ('Mistletoe - Justin Beiber', 'Feliz Navidad - Boney M.', 'We Wish You A Merry Christmas - Crazy Frog', 'Jingle Bells - Boney M.', 'Last Christmas - Wham!', 'All I Want For Christmas Is You - Mariah Carey'))
-if st.button("Bấm vào đây để nghe nhạc", type="secondary"):
+if st.button("Bấm vào đây để nghe nhạc 🎵🎵", type="secondary"):
     link = f"##### Playlist nhạc Giáng sinh hay nhất: [Danh sách phát](https://open.spotify.com/playlist/37i9dQZF1DX0Yxoavh5qJV)"
     st.markdown(link, unsafe_allow_html=True)
+    lottie_animation = load_lottie_animation(LOTTIE_ANIMATION_4)
+    st.lottie(lottie_animation, key="lottie-holiday-4", height=300)
 colored_header(
         label="4. Nhận quà từ Tuấn Long",
         description="Receive gift from Tun Long",
@@ -119,4 +121,49 @@ if st.button("Click here để nhận quà 🎁🎁", type="primary"):
     st.markdown(
     f"Dear :red[{name}], wishing you a wonderful holiday season filled with joy and peace. 🌟"
     ) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
