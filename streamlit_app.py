@@ -3,16 +3,17 @@ import json
 import streamlit as st
 from streamlit_lottie import st_lottie
 from streamlit_extras.let_it_rain import rain
-from streamlit_extras.colored_header import colored_header 
+from streamlit_extras.colored_header import colored_header
+import time 
 
 # Directories and file paths
 THIS_DIR = Path(__file__).parent
 CSS_FILE = THIS_DIR / "style" / "style.css"
 ASSETS = THIS_DIR / "assets"
 LOTTIE_ANIMATION_1 = ASSETS / "Animation1.json"
-LOTTIE_ANIMATION_2 = ASSETS /"Animation2.json"
+LOTTIE_ANIMATION_2 = ASSETS / "Animation2.json"
 LOTTIE_ANIMATION = ASSETS / "animation_holiday.json"
-LOTTIE_ANIMATION_3 = ASSETS /"Animation3.json"
+LOTTIE_ANIMATION_3 = ASSETS / "Animation3.json"
 
 # Function to load and display the Lottie animation
 def load_lottie_animation(file_path):
@@ -43,7 +44,7 @@ with open(CSS_FILE) as f:
 
 # Display header with personalized name
 PERSON_NAME = get_person_name()
-st.header(f"Merry Christmas, {PERSON_NAME}! 🎄", anchor=False)
+st.header(f"Merry Christmas, My Friend!!! 🎄", anchor=False)
 colored_header(
         label="1. Giáng sinh đã đến với mọi nhà ",
         description="Christmas has come to everyone 💖💖💖",
@@ -71,8 +72,22 @@ Trong ngày lễ Giáng sinh, mọi người giao tiếp với nhau bằng nhữ
 """)
 lottie_animation3 = load_lottie_animation(LOTTIE_ANIMATION_3)
 st_lottie(lottie_animation3, key="lottie-holiday-3", height=300)
-title = st.text_input('Gửi gắm những lời yêu thương: ', placeholder="Type here")
-st.button("Gửi")
+st.markdown("##### Gửi gắm những lời yêu thương: 💌💌💌",unsafe_allow_html=True)
+col1, col2 = st.columns(2)
+with col1:
+    receiver = st.text_input('Tên người nhận', placeholder="Nhập tên người nhận")
+with col2:
+    content = st.text_input('Nội dung: ', placeholder="Nhập nội dung")
+if st.button("Gửi"):
+    progress_text = "Thư đang được gửi, xin vui lòng chờ 🎅🎅"
+    my_bar = st.progress(0, text=progress_text)
+
+    for percent_complete in range(100):
+        time.sleep(0.01)
+        my_bar.progress(percent_complete + 1, text=progress_text)
+    time.sleep(1)
+    my_bar.empty()
+    st.write(f"Mong :red[{receiver}] sẽ nghe được những lời yêu thường này 😊😊")
 colored_header(
         label="3. Nghe những bản nhạc vào mùa lễ Giáng sinh",
         description="Listening to Christmas song 🎼🎼🎼",
@@ -104,49 +119,4 @@ if st.button("Click here để nhận quà 🎁🎁", type="primary"):
     st.markdown(
     f"Dear :red[{name}], wishing you a wonderful holiday season filled with joy and peace. 🌟"
     ) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
