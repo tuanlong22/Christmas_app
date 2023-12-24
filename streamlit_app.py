@@ -12,7 +12,7 @@ ASSETS = THIS_DIR / "assets"
 LOTTIE_ANIMATION_1 = ASSETS / "Animation1.json"
 LOTTIE_ANIMATION_2 = ASSETS / "Animation2.json"
 LOTTIE_ANIMATION = ASSETS / "animation_holiday.json"
-LOTTIE_ANIMATION_3 = ASSETS / "animation3.json"
+LOTTIE_ANIMATION_3 = ASSETS / "Animation3.json"
 
 # Function to load and display the Lottie animation
 def load_lottie_animation(file_path):
