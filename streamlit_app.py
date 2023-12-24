@@ -54,7 +54,7 @@ Giáng sinh là một ngày lễ vào ngày 25 tháng 12 kỷ niệm sự ra đ�
              """)
 # Display the Lottie animation
 lottie_animation = load_lottie_animation(LOTTIE_ANIMATION_1)
-st_lottie(lottie_animation, key="lottie-holiday", height=300)
+st.lottie(lottie_animation, key="lottie-holiday", height=300)
 
 # Personalized holiday message
 st.markdown(
@@ -100,7 +100,7 @@ Tặng quà là một trong những phong tục tuyệt vời nhất trong ngày
 name = st.text_input("Nhập tên của bạn: ")
 if st.button("Click here để nhận quà 🎁🎁", type="primary"):
     lottie_animation2 = load_lottie_animation(LOTTIE_ANIMATION_2)
-    st_lottie(lottie_animation2, key="lottie-holiday-2", height=300)
+    st.lottie(lottie_animation2, key="lottie-holiday-2", height=300)
     st.markdown(
     f"Dear :red[{name}], wishing you a wonderful holiday season filled with joy and peace. 🌟"
     ) 
