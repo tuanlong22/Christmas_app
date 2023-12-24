@@ -1,10 +1,10 @@
 # Web chúc mừng giáng sinh
 
-1 Chiếc Web đơn giản trong đợt giáng sinh này 🎄🎄
+Một Chiếc Web đơn giản trong đợt giáng sinh này 🎄🎄
 
 
 ## Live Website
-[Link to Website](https://happy-holidays.streamlit.app/?name=Coding%20Is%20Fun%20Community)
+[Link to Website]
 
 
 ## 🤝 Liên hệ với tôi
