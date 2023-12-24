@@ -1,2 +1,9 @@
 #MainMenu {visibility: hidden;}
 header {visibility: hidden;}
+@import url('https://fonts.googleapis.com/css2?family=Rubik Doodle Shadow:wght@100&display=swap'); 
+
+html, body, [class*="css"] {
+    font-family: 'Rubik Doodle Shadow'; 
+    font-size: 17px;
+    font-weight: 500;
+}
