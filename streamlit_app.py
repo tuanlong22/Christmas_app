@@ -69,8 +69,8 @@ colored_header(
 st.write("""
 Trong ngày lễ Giáng sinh, mọi người giao tiếp với nhau bằng những cử chỉ, lời nói thân mật nhất. Điều này thể hiện sự lịch sự. Mọi người luôn luôn tin rằng điều này làm cuộc sống của họ hạnh phúc hơn. Trong lễ Giáng sinh, mọi người trang trí cây thông và nhà cửa rất đẹp.
 """)
-lottie_animation = load_lottie_animation(LOTTIE_ANIMATION_3)
-st_lottie(lottie_animation, key="lottie-holiday-3", height=300)
+lottie_animation3 = load_lottie_animation(LOTTIE_ANIMATION_3)
+st_lottie(lottie_animation3, key="lottie-holiday-3", height=300)
 title = st.text_input('Gửi gắm những lời yêu thương: ', placeholder="Type here")
 st.button("Gửi")
 colored_header(
@@ -99,8 +99,8 @@ Tặng quà là một trong những phong tục tuyệt vời nhất trong ngày
 )
 name = st.text_input("Nhập tên của bạn: ")
 if st.button("Click here để nhận quà 🎁🎁", type="primary"):
-    lottie_animation = load_lottie_animation(LOTTIE_ANIMATION_2)
-    st_lottie(lottie_animation, key="lottie-holiday-2", height=300)
+    lottie_animation2 = load_lottie_animation(LOTTIE_ANIMATION_2)
+    st_lottie(lottie_animation2, key="lottie-holiday-2", height=300)
     st.markdown(
     f"Dear :red[{name}], wishing you a wonderful holiday season filled with joy and peace. 🌟"
     ) 
