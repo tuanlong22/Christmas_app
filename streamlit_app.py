@@ -44,7 +44,7 @@ with open(CSS_FILE) as f:
 
 # Display header with personalized name
 PERSON_NAME = get_person_name()
-st.header(f"Merry Christmas, My Friend!!! 🎄", anchor=False)
+st.header(f"Merry Christmas!!! 🎄", anchor=False)
 colored_header(
         label="1. Giáng sinh đã đến với mọi nhà ",
         description="Christmas has come to everyone ❄️❄️",
