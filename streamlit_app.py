@@ -53,7 +53,7 @@ st.write("""
 Giáng sinh là một ngày lễ vào ngày 25 tháng 12 kỷ niệm sự ra đời của Chúa Giê-su Ki-tô. Giáng sinh ngày càng trở nên phổ biến ở Việt Nam, đặc biệt là giới trẻ. Vào ngày này, mọi người thường trang trí nhà cửa và chuẩn bị quà, ... Mặc dù vậy, nhiều hộ gia đình ở các thành phố lớn vẫn mua cây thông Noel và treo đèn và chuông nhỏ trên đó. Trẻ em cũng rất thích ngày lễ Giáng sinh. Họ chuẩn bị đồ sạch để nhận quà từ ông già Noel.
              """)
 # Display the Lottie animation
-lottie_animation = load_lottie_animation(LOTTIE_ANIMATION_3)
+lottie_animation = load_lottie_animation(LOTTIE_ANIMATION_1)
 st.lottie(lottie_animation, key="lottie-holiday", height=300)
 
 # Personalized holiday message
